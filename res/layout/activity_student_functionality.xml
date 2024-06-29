@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/upper_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/down_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="858dp" />
+
+    <TextView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/upper_line"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:id="@+id/course_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Course Name"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/upper_line"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_attend"
+        android:layout_width="185dp"
+        android:layout_height="215dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="10dp"
+        app:cardElevation="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upper_line">
+
+        <ImageView
+            android:id="@+id/attend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/attend_lec" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_quiz"
+        android:layout_width="180dp"
+        android:layout_height="215dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="30dp"
+        app:cardElevation="9dp"
+        app:layout_constraintStart_toEndOf="@id/card_view_attend"
+        app:layout_constraintTop_toBottomOf="@id/upper_line">
+
+        <ImageView
+            android:id="@+id/quiz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/solve_quiz" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_material"
+        android:layout_width="180dp"
+        android:layout_height="215dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="19dp"
+        app:layout_constraintStart_toEndOf="@id/card_view_grades"
+        app:layout_constraintTop_toBottomOf="@id/card_view_attend">
+
+        <ImageView
+            android:id="@+id/material"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/download_material" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_grades"
+        android:layout_width="185dp"
+        android:layout_height="215dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view_quiz">
+
+        <ImageView
+            android:id="@+id/grades"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/show_grades" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_chat"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="20dp"
+        app:cardElevation="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/down_line">
+
+        <ImageView
+            android:id="@+id/chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/newchat" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
